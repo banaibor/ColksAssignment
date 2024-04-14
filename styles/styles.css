@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body.login-page {
+    background-image: url('../assets/public/artboard1.png'); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.box {
+    background-color: rgba(253, 253, 253, 0.8);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+.form-box{
+    width: 450px;
+    margin: 0px 10px;
+}
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+.form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+}
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.btn{
+    height: 35px;
+    background: rgba(76,68,182,0.808);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.btn:hover{
+    opacity: 0.82;
+}
+.submit{
+    width: 100%;
+}
+.links{
+    margin-bottom: 15px;
+}
+
+/********* Home *****************/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #333
+}
+.banner img {
+    width: 100%;
+    height: auto;
+}
+.right-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.right-links a.edit-btn,
+.right-links a.logout-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Default color for Edit button */
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-links a.logout-btn {
+    background-color: #dc3545; /* Red color for Logout button */
+}
+
+.right-links a.edit-btn:hover,
+.right-links a.logout-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover for both buttons */
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+}
+.menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+.menu ul li a:hover {
+    color: #ccc;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.main-box .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom{
+    width: 100%;
+    margin-top: 20px;
+}
+@media only screen and (max-width:840px){
+    .main-box .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .top .box{
+        margin: 10px 10px;
+    }
+    .bottom{
+        margin-top: 0;
+    }
+}
+.message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border:1px solid #699053;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+/******************CSS for photos************/
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 3;
+    column-gap: 10px;
+    margin-top: 20px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, z-index 0s;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+@media (min-width: 768px) {
+    .masonry-layout {
+        column-count: 5;
+        column-gap: 10px;
+    }
+
+    .masonry-layout .gallery img {
+        width: 100%;
+        break-inside: avoid-column;
+    }
+}
